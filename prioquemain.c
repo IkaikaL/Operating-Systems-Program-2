@@ -4,7 +4,7 @@
 #include "prioque.h"
 
 int Clock = 0;
-
+Process idleProcess;
 typedef struct process{
   int pid;
   unsigned long arrival_time;
@@ -25,7 +25,7 @@ void read_process_descriptions(void) {
   int pid = 0, first = 1;
   unsigned long arrival;
   Queue ArrivalQ;
-  Queue idleProcess;
+  
 
   init_process(&p);
   arrival = 0;
