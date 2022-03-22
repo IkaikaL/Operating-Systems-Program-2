@@ -43,7 +43,6 @@ void destroy_queue(Queue *q) {
   // The thread that has locked a mutex becomes its current owner and 
   // remains the owner until the same thread has unlocked it
   // lock entire queue
-  (&(q->lock)); 
   nolock_destroy_queue(q);
 
   // pthread_mutex_unlock: Releases a mutex object. 
